@@ -17,14 +17,10 @@
       },
       "minimumSize": { "width": 320, "height": 480 },
       "maximumSize": { "width": 600, "height": 3000 },
-      "preferredDockedSize": { "width": 380, "height": 700 },
-      "icons": []
+      "preferredDockedSize": { "width": 380, "height": 700 }
     }
   ],
   "requiredPermissions": {
-    "localFileSystem": "fullAccess",
-    "network": {
-      "domains": "none"
-    }
+    "localFileSystem": "fullAccess"
   }
 }
