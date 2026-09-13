@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="panel">
+    <section class="block">
+      <div class="block-header">
+        <h3>1. Слои источника</h3>
+        <sp-button id="btnRefresh" size="s" quiet>Обновить</sp-button>
+      </div>
+      <p class="hint" id="docName">Нет активного документа</p>
+      <div id="layerList" class="layer-list"></div>
+    </section>
+
+    <section class="block">
+      <h3>2. Целевые размеры</h3>
+      <div id="presetGroups"></div>
+      <div class="custom-size-row">
+        <input id="customW" type="number" placeholder="W" min="1" />
+        <span>×</span>
+        <input id="customH" type="number" placeholder="H" min="1" />
+        <sp-button id="btnAddSize" size="s">Добавить</sp-button>
+      </div>
+      <div id="selectedSizes" class="selected-sizes"></div>
+    </section>
+
+    <section class="block">
+      <h3>3. Куда сохранять</h3>
+      <sp-button id="btnPickFolder" size="s">Выбрать папку…</sp-button>
+      <p class="hint" id="folderPath">Папка не выбрана</p>
+      <div class="format-row">
+        <label><input type="radio" name="fmt" value="png" checked /> PNG</label>
+        <label><input type="radio" name="fmt" value="jpg" /> JPG</label>
+      </div>
+    </section>
+
+    <section class="block">
+      <sp-button id="btnGenerate" variant="cta">Сгенерировать все ресайзы</sp-button>
+      <div id="log" class="log"></div>
+    </section>
+  </div>
+
+  <!--
+    UXP panels use a CommonJS module system (like Node), so only the entry
+    script is loaded here - it pulls in roles.js / presets.js / engine.js /
+    layerTree.js itself via require('./roles.js') etc. Don't add <script>
+    tags for those files, they'd just be dead code with no module.exports
+    target in a plain browser <script> context.
+  -->
+  <script src="js/main.js"></script>
+</body>
+</html>

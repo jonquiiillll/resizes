@@ -1,0 +1,30 @@
+{
+  "id": "com.resizes.autoresize",
+  "name": "Auto Resize",
+  "version": "0.1.0",
+  "main": "index.html",
+  "manifestVersion": 5,
+  "host": {
+    "app": "PS",
+    "minVersion": "24.0.0"
+  },
+  "entrypoints": [
+    {
+      "type": "panel",
+      "id": "resizePanel",
+      "label": {
+        "default": "Auto Resize"
+      },
+      "minimumSize": { "width": 320, "height": 480 },
+      "maximumSize": { "width": 600, "height": 3000 },
+      "preferredDockedSize": { "width": 380, "height": 700 },
+      "icons": []
+    }
+  ],
+  "requiredPermissions": {
+    "localFileSystem": "fullAccess",
+    "network": {
+      "domains": "none"
+    }
+  }
+}
